@@ -1,6 +1,6 @@
-I build AI systems for work where a wrong answer costs something, for example: compliance, safety and cloud operations.
+I build AI systems for work where a wrong answer costs something, such as compliance, safety and cloud operations.
 
-My background is solutions architecture, customer facing engineering and engineering management at startups and enterprise organizations. My most recent role was software dev and compliance manager on a SOC 2 program.
+My background is solutions architecture, customer-facing engineering and engineering management at startups and enterprise organizations. My most recent role was software engineer and compliance manager on a SOC 2 program.
 
 ## The pattern
 
@@ -22,7 +22,7 @@ My current projects use the same four rules:
 | [agentic-patterns-catalog](https://github.com/cdevarenne/agentic-patterns-catalog) | Agent design | Picks design patterns for a task, with provenance on every field. MCP server with a policy layer. | Work in progress |
 | Cloud patching with Pulumi | Cloud operations | An agent patches workloads within a policy, with preview, rollback and an audit trail. | Next |
 
-Each repo has a "How this was built" page with the specs, the human review gates and the failures.
+okf-grc-skill and okf-drone-skill include a 'How this was built' page with the specs, the human review gates and the failures.
 
 ## Writing
 
