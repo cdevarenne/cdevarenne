@@ -13,14 +13,14 @@ My current projects use the same four rules:
 
 ## Projects
 
-| Project | Domain | What it shows | Status |
-|---|---|---|---|
-| [grounded-context](https://github.com/cdevarenne/grounded-context) | Retrieval for agents | Exact facts are looked up, never ranked. Gaps refuse. Elasticsearch, MCP. | Prototype, [write-up](https://medium.com/@claude.devarenne/a-grounded-context-layer-for-agents-and-three-things-hybrid-search-wont-tell-you-e71fdc334773) |
-| [okf-grc-skill](https://github.com/cdevarenne/okf-grc-skill) | Compliance evidence | Scanner findings mapped to SOC 2, ISO/IEC 42001 and EU AI Act controls, only through reviewed rules. OSCAL output, CI gate. | Work in progress at v1.8.1 |
-| [okf-grc-demo-boutique](https://github.com/cdevarenne/okf-grc-demo-boutique) | Adoption on real code | okf-grc applied to Google's demo app Online Boutique: 422 findings, 47 gaps triaged for $0.04, an AI draft and its review. | Worked example |
-| [okf-drone-skill](https://github.com/cdevarenne/okf-drone-skill) | Civil drone missions | Flight plans checked against EASA SORA 2.5. GO, NO-GO or HOLD. A person signs. | Work in progress at v1 |
-| [agentic-patterns-catalog](https://github.com/cdevarenne/agentic-patterns-catalog) | Agent design | Picks design patterns for a task, with provenance on every field. MCP server with a policy layer. | Work in progress |
-| Cloud patching with Pulumi | Cloud operations | An agent patches workloads within a policy, with preview, rollback and an audit trail. | Next |
+| Project | Domain | What it shows | Where the AI is, and what checks it | Status |
+|---|---|---|---|---|
+| [grounded-context](https://github.com/cdevarenne/grounded-context) · [JVM port](https://github.com/cdevarenne/grounded-context-jvm) | Retrieval for agents | Exact facts are looked up, never ranked. Gaps refuse. Elasticsearch, MCP. | Semantic search only for exploration; below a measured relevance floor it refuses. A 20-question eval checks the answer and the route. | Complete, [write-up](https://medium.com/@claude.devarenne/a-grounded-context-layer-for-agents-and-three-things-hybrid-search-wont-tell-you-e71fdc334773) |
+| [okf-grc-skill](https://github.com/cdevarenne/okf-grc-skill) | Compliance evidence | Scanner findings mapped to SOC 2, ISO/IEC 42001 and EU AI Act controls, only through reviewed rules. OSCAL output, CI gate. | An LLM drafts report text and proposes controls for unmapped findings. Held-out eval, cost log. The scan has no LLM. | Released v1.8 |
+| [okf-grc-demo-boutique](https://github.com/cdevarenne/okf-grc-demo-boutique) | Adoption on real code | okf-grc applied to Google's demo app Online Boutique: 422 findings, 47 gap rules. | Claude Haiku proposed a control for each gap rule ($0.04). A person decided all 47: 42 mapped, 5 left as gaps. | Worked example |
+| [okf-drone-skill](https://github.com/cdevarenne/okf-drone-skill) | Civil drone missions | Flight plans checked against EASA SORA 2.5. GO, NO-GO or HOLD. Flown in PX4 simulation. | Optional LLM steps with their own eval. The plan, the checks and the risk score have no LLM. A person signs. | Released v1.0 |
+| [agentic-patterns-catalog](https://github.com/cdevarenne/agentic-patterns-catalog) | Agent design | 288 agentic design patterns served to agents over MCP, behind a policy layer, with provenance on every field. | LLM-drafted enrichment stays marked unreviewed until a person reviews it. Golden-set eval. | Active: enrichment in progress |
+| Cloud DevSecOps *(name TBD)* | Cloud operations | An agent proposes patches within a policy, with preview, rollback and an audit trail. | The agent proposes. Policy code decides. A person approves. | Planned |
 
 okf-grc-skill and okf-drone-skill include a 'How this was built' page with the specs, the human review gates and the failures.
 
@@ -32,9 +32,3 @@ okf-grc-skill and okf-drone-skill include a 'How this was built' page with the s
 ## Contact
 
 [LinkedIn](https://www.linkedin.com/in/cdevarenne) · Based in the San Francisco Bay Area
-
-
-<!---
-cdevarenne/cdevarenne is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
