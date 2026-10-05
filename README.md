@@ -22,7 +22,7 @@ My current projects use the same four rules:
 | [agentic-patterns-catalog](https://github.com/cdevarenne/agentic-patterns-catalog) | Agent design | 288 agentic design patterns served to agents over MCP, behind a policy layer, with provenance on every field. | LLM-drafted enrichment stays marked unreviewed until a person reviews it. Golden-set eval. | Active: enrichment in progress |
 | Cloud DevSecOps *(name TBD)* | Cloud operations | An agent proposes patches within a policy, with preview, rollback and an audit trail. | The agent proposes. Policy code decides. A person approves. | Planned |
 
-okf-grc-skill and okf-drone-skill include a 'How this was built' page with the specs, the human review gates and the failures.
+grc-evidence and drone-mission-plan include a 'How this was built' page with the specs, the human review gates and the failures.
 
 ## Writing
 
