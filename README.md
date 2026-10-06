@@ -1,7 +1,7 @@
 I build AI systems for work where a wrong answer costs something, such as compliance, safety and cloud operations.
 
 My background is solutions architecture, customer-facing engineering and engineering management at startups and enterprise organizations. 
-Most recently, I owned a SOC 2 Type 2 program from gap analysis to the issued report. I built the tooling that turned controls into audit evidence, and I worked directly with the auditors. The pattern in the `grc-evidence` repo demosntrates further automation: code decides, the LLM drafts, a person signs.
+Most recently, I owned a SOC 2 Type 2 program from gap analysis to the issued report. I built the tooling that turned controls into audit evidence, and I worked directly with the auditors. The grc-evidence repo takes that automation further: code decides, the LLM drafts, a person signs.
 
 
 
