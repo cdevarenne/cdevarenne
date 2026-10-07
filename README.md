@@ -1,9 +1,9 @@
 I build AI systems that must not guess. I focus on compliance, safety and cloud operations, where a wrong answer has a real cost.
 
 My background is solutions architecture, customer-facing engineering and engineering management at startups and enterprise organizations. 
-Most recently, I owned a SOC 2 Type 2 program from gap analysis to the issued report. I built the tooling that turned controls into audit evidence, and I worked directly with the auditors. The grc-evidence repo takes that automation further: code decides, the LLM drafts, a person signs.
+Most recently, I owned a SOC 2 Type 2 program from gap analysis to the issued report. I built the tooling that turned controls into audit evidence, and I worked directly with the auditors. [grc-evidence](https://github.com/cdevarenne/grc-evidence) is a clean-room rebuild of that idea: code decides, the LLM drafts, a person signs.
 
-
+**Stack:** Python, Kotlin/Java, Elasticsearch, MCP, Postgres, OSCAL, PX4, GCP.
 
 ## The pattern
 
@@ -20,16 +20,17 @@ My current projects use the same four rules:
 |---|---|---|---|---|
 | [grounded-context](https://github.com/cdevarenne/grounded-context) · [JVM port](https://github.com/cdevarenne/grounded-context-jvm) | Retrieval for agents | Exact facts are looked up, never ranked. Gaps refuse. Elasticsearch, MCP. | Semantic search only for exploration; below a measured relevance floor it refuses. A 20-question eval checks the answer and the route. | Complete, [write-up](https://medium.com/@claude.devarenne/a-grounded-context-layer-for-agents-and-three-things-hybrid-search-wont-tell-you-e71fdc334773) |
 | [grc-evidence](https://github.com/cdevarenne/grc-evidence) | Compliance evidence | Turns scans, repo settings and change history into SOC 2 Type 2 evidence over an audit window. Code decides status. An LLM drafts prose. A person signs. | An LLM drafts report text and proposes controls for unmapped findings. Held-out eval, cost log. The scan has no LLM. | Released v2 |
-| [grc-evidence-boutique](https://github.com/cdevarenne/grc-evidence-boutique) | Adoption on real code | grc-evidence applied to Google's Online Boutique: 422 findings mapped to controls, a compliance gate on every PR, Type 2 evidence collected nightly into a hash-chained ledger, and an agent's draft with the review that corrected it. | Claude Haiku proposed a control for each gap rule ($0.04). A person decided all 47: 42 mapped, 5 left as gaps. | Worked example |
+| [grc-evidence-boutique](https://github.com/cdevarenne/grc-evidence-boutique) | Adoption on real code | grc-evidence on Google's Online Boutique: 422 findings mapped, a gate on every PR, nightly hash-chained Type 2 evidence. | Claude Haiku proposed a control for each gap rule ($0.04). A person decided all 47: 42 mapped, 5 left as gaps. | Worked example |
 | [drone-mission-plan](https://github.com/cdevarenne/drone-mission-plan) | Civil drone missions | Flight plans checked against EASA SORA 2.5. GO, NO-GO or HOLD. Flown in PX4 simulation. | Optional LLM steps with their own eval. The plan, the checks and the risk score have no LLM. A person signs. | Released v1.0 |
-| [agentic-patterns-catalog](https://github.com/cdevarenne/agentic-patterns-catalog) | Agent design | 288 agentic design patterns served to agents over MCP, behind a policy layer, with provenance on every field. | LLM-drafted enrichment stays marked unreviewed until a person reviews it. Golden-set eval. | Active: enrichment in progress |
-| Cloud DevSecOps *(name TBD)* | Cloud operations | An agent proposes patches within a policy, with preview, rollback and an audit trail. | The agent proposes. Policy code decides. A person approves. | Planned |
+| [agentic-patterns-catalog](https://github.com/cdevarenne/agentic-patterns-catalog) | Agent design | 288 agentic design patterns (11 in the public repo; the rest rebuilt locally under the source license) served to agents over MCP, behind a policy layer, with provenance on every field. | LLM-drafted enrichment stays marked unreviewed until a person reviews it. Golden-set eval. | Active: enrichment in progress |
+
+**Next:** Cloud DevSecOps *(name TBD)* An agent proposes patches within a policy, with preview, rollback and an audit trail. The agent proposes; policy code decides; a person approves.
 
 grc-evidence and drone-mission-plan include a 'How this was built' page with the specs, the human review gates and the failures.
 
 ## Writing
 
-- [A Grounded Context Layer for Agents](https://medium.com/@claude.devarenne/a-grounded-context-layer-for-agents-and-three-things-hybrid-search-wont-tell-you-e71fdc334773)
+- [When Your Agent Should Say Nothing](https://medium.com/@claude.devarenne/a-grounded-context-layer-for-agents-and-three-things-hybrid-search-wont-tell-you-e71fdc334773)
 - Ground, Bound, Prove, Measure: a pattern for AI where a wrong answer costs something *(coming soon)*
 
 ## Contact
