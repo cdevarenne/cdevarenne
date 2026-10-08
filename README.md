@@ -27,7 +27,7 @@ grc-evidence and drone-mission-plan include a "How this was built" page with the
 
 **Stack:** Python, Java/Spring, Elasticsearch, MCP, Postgres, OPA, OSCAL, PX4, GCP.
 
-**Next:** Agentic DevSecOps. An agent proposes patches within a policy, with preview, rollback and an audit trail. The agent proposes, policy code decides, a person approves. Pulumi.
+**Next:** Agentic DevSecOps. An agent proposes patches within a policy, with preview, rollback and an audit trail. The agent proposes, policy code decides, a person approves.
 
 ## Writing
 
