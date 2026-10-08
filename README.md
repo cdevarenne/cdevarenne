@@ -3,8 +3,6 @@ I build AI systems that must not guess. I focus on compliance, safety and cloud 
 My background is solutions architecture, customer-facing engineering and engineering management at startups and enterprise organizations. 
 Most recently, I owned a SOC 2 Type 2 program from gap analysis to the issued report. I built the tooling that turned controls into audit evidence, and I worked directly with the auditors. [grc-evidence](https://github.com/cdevarenne/grc-evidence) is a clean-room rebuild of that idea: code decides, the LLM drafts, a person signs.
 
-**Stack:** Python, Kotlin/Java, Elasticsearch, MCP, Postgres, OSCAL, PX4, GCP.
-
 ## The pattern
 
 My current projects use the same four rules:
@@ -24,14 +22,17 @@ My current projects use the same four rules:
 | [drone-mission-plan](https://github.com/cdevarenne/drone-mission-plan) | Civil drone missions | Flight plans checked against EASA SORA 2.5. GO, NO-GO or HOLD. Flown in PX4 simulation. | Optional LLM steps with their own eval. The plan, the checks and the risk score have no LLM. A person signs. | Released v1.0 |
 | [agentic-patterns-catalog](https://github.com/cdevarenne/agentic-patterns-catalog) | Agent design | 288 agentic design patterns (11 in the public repo; the rest rebuilt locally under the source license) served to agents over MCP, behind a policy layer, with provenance on every field. | LLM-drafted enrichment stays marked unreviewed until a person reviews it. Golden-set eval. | Active: enrichment in progress |
 
-**Next:** Cloud DevSecOps *(name TBD)* An agent proposes patches within a policy, with preview, rollback and an audit trail. The agent proposes; policy code decides; a person approves.
 
 grc-evidence and drone-mission-plan include a 'How this was built' page with the specs, the human review gates and the failures.
+
+**Stack:** Python, Kotlin/Java, Elasticsearch, MCP, Postgres, OSCAL, PX4, GCP.
+
 
 ## Writing
 
 - [When Your Agent Should Say Nothing](https://medium.com/@claude.devarenne/a-grounded-context-layer-for-agents-and-three-things-hybrid-search-wont-tell-you-e71fdc334773)
-- Ground, Bound, Prove, Measure: a pattern for AI where a wrong answer costs something *(coming soon)*
+- **Next:** Cloud DevSecOps *(name TBD)* &#151; An agent proposes patches within a policy, with preview, rollback and an audit trail. The agent proposes; policy code decides; a person approves.
+
 
 ## Contact
 
