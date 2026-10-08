@@ -16,23 +16,22 @@ My current projects use the same four rules:
 
 | Project | Domain | What it shows | Where the AI is, and what checks it | Status |
 |---|---|---|---|---|
-| [grounded-context](https://github.com/cdevarenne/grounded-context) · [JVM port](https://github.com/cdevarenne/grounded-context-jvm) | Retrieval for agents | Exact facts are looked up, never ranked. Gaps refuse. Elasticsearch, MCP. | Semantic search only for exploration; below a measured relevance floor it refuses. A 20-question eval checks the answer and the route. | Complete, [write-up](https://medium.com/@claude.devarenne/a-grounded-context-layer-for-agents-and-three-things-hybrid-search-wont-tell-you-e71fdc334773) |
+| [grounded-context](https://github.com/cdevarenne/grounded-context) · [JVM port](https://github.com/cdevarenne/grounded-context-jvm) | Retrieval for agents | Exact facts are looked up, never ranked. Gaps refuse. Elasticsearch, MCP. | Semantic search only for exploration; below a measured relevance floor it refuses. A 20-question eval checks the answer and the route. | Complete (Elasticsearch version), [write-up](https://medium.com/@claude.devarenne/a-grounded-context-layer-for-agents-and-three-things-hybrid-search-wont-tell-you-e71fdc334773) |
 | [grc-evidence](https://github.com/cdevarenne/grc-evidence) | Compliance evidence | Turns scans, repo settings and change history into SOC 2 Type 2 evidence over an audit window. Code decides status. An LLM drafts prose. A person signs. | An LLM drafts report text and proposes controls for unmapped findings. Held-out eval, cost log. The scan has no LLM. | Released v2 |
 | [grc-evidence-boutique](https://github.com/cdevarenne/grc-evidence-boutique) | Adoption on real code | grc-evidence on Google's Online Boutique: 422 findings mapped, a gate on every PR, nightly hash-chained Type 2 evidence. | Claude Haiku proposed a control for each gap rule ($0.04). A person decided all 47: 42 mapped, 5 left as gaps. | Worked example |
 | [drone-mission-plan](https://github.com/cdevarenne/drone-mission-plan) | Civil drone missions | Flight plans checked against EASA SORA 2.5. GO, NO-GO or HOLD. Flown in PX4 simulation. | Optional LLM steps with their own eval. The plan, the checks and the risk score have no LLM. A person signs. | Released v1.0 |
-| [agentic-patterns-catalog](https://github.com/cdevarenne/agentic-patterns-catalog) | Agent design | 288 agentic design patterns (11 in the public repo; the rest rebuilt locally under the source license) served to agents over MCP, behind a policy layer, with provenance on every field. | LLM-drafted enrichment stays marked unreviewed until a person reviews it. Golden-set eval. | Active: enrichment in progress |
+| [agentic-patterns-catalog](https://github.com/cdevarenne/agentic-patterns-catalog) | Agent design | 288 agentic design patterns (11 public; the rest rebuilt locally under the source license), served to agents over MCP behind a policy layer, with provenance on every field. | LLM-drafted enrichment stays marked unreviewed until a person reviews it. Golden-set eval. | Active: enrichment in progress |
 
 
-grc-evidence and drone-mission-plan include a 'How this was built' page with the specs, the human review gates and the failures.
+grc-evidence and drone-mission-plan include a "How this was built" page with the specs, the human review gates and the failures.
 
-**Stack:** Python, Kotlin/Java, Elasticsearch, MCP, Postgres, OSCAL, PX4, GCP.
+**Stack:** Python, Java/Spring, Elasticsearch, MCP, Postgres, OSCAL, PX4, GCP.
 
+**Next:** Agentic DevSecOps. An agent proposes patches within a policy, with preview, rollback and an audit trail. The agent proposes, policy code decides, a person approves. Pulumi, OPA.
 
 ## Writing
 
 - [When Your Agent Should Say Nothing](https://medium.com/@claude.devarenne/a-grounded-context-layer-for-agents-and-three-things-hybrid-search-wont-tell-you-e71fdc334773)
-- **Next:** Agentic DevSecOps &mdash; An agent proposes patches within a policy, with preview, rollback and an audit trail. The agent proposes; policy code decides; a person approves. Tech stack: Pulumi, OPA...
-
 
 ## Contact
 
