@@ -31,7 +31,7 @@ grc-evidence and drone-mission-plan include a 'How this was built' page with the
 ## Writing
 
 - [When Your Agent Should Say Nothing](https://medium.com/@claude.devarenne/a-grounded-context-layer-for-agents-and-three-things-hybrid-search-wont-tell-you-e71fdc334773)
-- **Next:** Cloud DevSecOps *(name TBD)* &#151; An agent proposes patches within a policy, with preview, rollback and an audit trail. The agent proposes; policy code decides; a person approves.
+- **Next:** Cloud DevSecOps *(name TBD)* &mdash; An agent proposes patches within a policy, with preview, rollback and an audit trail. The agent proposes; policy code decides; a person approves.
 
 
 ## Contact
