@@ -25,9 +25,9 @@ My current projects use the same four rules:
 
 grc-evidence and drone-mission-plan include a "How this was built" page with the specs, the human review gates and the failures.
 
-**Stack:** Python, Java/Spring, Elasticsearch, MCP, Postgres, OSCAL, PX4, GCP.
+**Stack:** Python, Java/Spring, Elasticsearch, MCP, Postgres, OPA, OSCAL, PX4, GCP.
 
-**Next:** Agentic DevSecOps. An agent proposes patches within a policy, with preview, rollback and an audit trail. The agent proposes, policy code decides, a person approves. Pulumi, OPA.
+**Next:** Agentic DevSecOps. An agent proposes patches within a policy, with preview, rollback and an audit trail. The agent proposes, policy code decides, a person approves. Pulumi.
 
 ## Writing
 
